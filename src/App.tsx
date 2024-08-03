@@ -1,5 +1,6 @@
 import "./App.css";
-import BasicCommands from "./sections/basic_commands";
+import BasicCommands from "./sections/basic-commands/BasicCommands";
+import GithubConnect from "./sections/connect-to-github/GithubConnect";
 
 function App() {
   return (
@@ -9,8 +10,9 @@ function App() {
           Kickstart your coding with Git and Github
         </h1>
       </div>
-      <main className="flex">
+      <main className="flex flex-col">
         <BasicCommands />
+        <GithubConnect />
       </main>
     </>
   );

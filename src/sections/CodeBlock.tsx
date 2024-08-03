@@ -1,5 +1,5 @@
-import copyIcon from "./assets/copy.svg";
-import checkIcon from "./assets/tick.svg";
+import copyIcon from "../assets/copy.svg";
+import checkIcon from "../assets/tick.svg";
 import { useState } from "react";
 interface codeBlockProps {
   codeText: string;

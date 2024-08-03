@@ -22,6 +22,10 @@ export const gitRestore: string = `
   git restore my_crippling_insecurities.txt 
 `;
 
+export const gitRestoreStaged: string = `
+  git restore --staged my_gnarly_secrets.txt 
+`;
+
 export const commit: string = `
   git commit 
 `;

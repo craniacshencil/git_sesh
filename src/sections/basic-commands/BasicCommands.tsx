@@ -1,10 +1,10 @@
 import * as snippets from "./snippets";
-import CodeBlock from "../Code-block";
-import * as styles from "../styles";
+import CodeBlock from "../CodeBlock";
+import * as styles from "../../styles";
 const BasicCommands = () => {
   return (
     <section className="basic-functions flex flex-col gap-10">
-      <div className={styles.headingStyle}>1. Basic git commands</div>
+      <div className={styles.heading}>1. Basic git commands</div>
 
       <div className="init-command">
         <div className={styles.subheading}>1.1. Init</div>
@@ -64,9 +64,14 @@ const BasicCommands = () => {
         <CodeBlock codeText={snippets.gitAddAll} />
 
         <p className={styles.para}>
-          In case you've added a file that you didn't want to add
+          In case you've added a untracked file that you didn't want to add
         </p>
         <CodeBlock codeText={snippets.gitRestore} />
+
+        <p className={styles.para}>
+          In case you've added a tracked file that you didn't want to add
+        </p>
+        <CodeBlock codeText={snippets.gitRestoreStaged} />
       </div>
 
       <div className="commit-command">

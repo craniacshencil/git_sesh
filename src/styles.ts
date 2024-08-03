@@ -1,4 +1,4 @@
-export const headingStyle: string =
+export const heading: string =
   "p-3 border-b-2 border-white text-5xl fancy-bold";
 export const subheading: string =
   "pl-1 p-2 border-b-2 border-white text-4xl fancy-regular";
