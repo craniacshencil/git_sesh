@@ -11,12 +11,12 @@ const CodeBlock: React.FC<codeBlockProps> = ({ codeText }) => {
     seticon(checkIcon);
   };
   return (
-    <div className="bg-gray-700 rounded-md flex items-center justify-between pl-1 pr-3 pb-5 my-3">
+    <div className="bg-gray-700 rounded-md flex items-center justify-between pl-1 pr-3 pb-5 mb-7">
       <pre>
         <code className="text-md">{codeText}</code>
       </pre>
       <img
-        className="cursor-pointer"
+        className="cursor-pointer self-start mt-2"
         src={icon}
         height={25}
         width={25}
