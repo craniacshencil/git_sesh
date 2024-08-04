@@ -6,3 +6,5 @@ export const subsubheading: string =
   "text-3xl mt-3 mb-5 pb-2 fancy-bold border-b-2 border-white";
 export const para: string = "my-7 text-xl";
 export const codeHead: string = "text-2xl mt-12 mb-2 fancy-italic";
+export const infoBox: string =
+  "text-2xl p-3 rounded-md fancy-regular bg-sky-800 border-2 border-sky-500";

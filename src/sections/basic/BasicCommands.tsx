@@ -5,6 +5,19 @@ const BasicCommands = () => {
   return (
     <section className="basic-functions flex flex-col gap-10">
       <div className={styles.heading}>1. Basic git commands</div>
+      <div className={styles.infoBox}>
+        Psst! You need to download
+        <a
+          className="cursor-pointer mt-2 text-2xl text-sky-300 hover:text-sky-200"
+          target="_blank"
+          href="https://github.com/craniacshencil/temp-converter"
+          rel="noreferrer noopener"
+        >
+          {" "}
+          this folder{" "}
+        </a>
+        to continue
+      </div>
 
       <div className="init-command">
         <div className={styles.subheading}>1.1. Init</div>
@@ -63,7 +76,9 @@ const BasicCommands = () => {
         <p className={styles.codeHead}>Add a specific folder</p>
         <CodeBlock codeText={snippets.gitAddDir} />
 
-        <p className={styles.codeHead}>You can add all your unsaved files</p>
+        <p className={styles.codeHead}>
+          You can add all your unsaved files from the root of your project
+        </p>
         <CodeBlock codeText={snippets.gitAddAll} />
 
         <p className={styles.codeHead}>

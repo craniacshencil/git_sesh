@@ -25,7 +25,12 @@ const GithubConnect: React.FC = () => {
           <div className={`${styles.para} self-center`}>
             Create a repository from the sidebar on homepage
             <br />
-            <strong>(Make sure you are logged in!)</strong>
+            named{" "}
+            <strong>
+              <em>firstName-temp-converter</em>
+            </strong>
+            <br />
+            <strong>(Stick to this name & Make sure you are logged in!)</strong>
           </div>
         </div>
       </div>
@@ -98,13 +103,13 @@ const GithubConnect: React.FC = () => {
           <p className={styles.para}>
             <strong>NOTE:</strong> <em>-u</em> is the{" "}
             <strong>--set-upstream</strong> flag, here we are telling git that
-            the
-            <em>main</em> branch of our remote repository should mirror/track
-            the branch of our local repository that we are pushing from, which
-            also happens to be <em>main</em>. We use this command only once
-            because now git knows what our local branch should correspond to,
-            and it remembers it for us! So for all the commits that you plan on
-            pushing from this point onwards on would look like this:
+            the <em>main</em> branch of our remote repository should
+            mirror/track the branch of our local repository that we are pushing
+            from, which also happens to be <em>main</em>. We use this command
+            only once because now git knows what our local branch should
+            correspond to, and it remembers it for us! So for all the commits
+            that you plan on pushing from this point onwards on would look like
+            this:
           </p>
 
           <p className={styles.codeHead}>

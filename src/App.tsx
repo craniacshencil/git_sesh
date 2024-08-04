@@ -1,6 +1,7 @@
 import "./App.css";
 import BasicCommands from "./sections/basic/BasicCommands";
 import GithubConnect from "./sections/remote/GithubConnect";
+import * as styles from "./styles";
 
 function App() {
   return (
