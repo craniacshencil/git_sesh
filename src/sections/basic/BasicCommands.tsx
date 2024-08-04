@@ -13,6 +13,8 @@ const BasicCommands = () => {
           like starting a new project where Git will keep track of all your
           changes.
         </p>
+
+        <p className={styles.codeHead}>Initialize a repository</p>
         <CodeBlock codeText={snippets.gitInit} />
         <p className={styles.para}>
           <strong>NOTE</strong>: This will create a <em>.git</em> folder in your
@@ -27,6 +29,7 @@ const BasicCommands = () => {
           which files have changed and which ones are ready to be saved.
         </p>
 
+        <p className={styles.codeHead}>Check status of all files</p>
         <CodeBlock codeText={snippets.gitStatus} />
 
         <p className={styles.para}>
@@ -54,21 +57,21 @@ const BasicCommands = () => {
           snapshot of your project.
         </p>
 
-        <p className={styles.para}>You can add a specific file </p>
+        <p className={styles.codeHead}>Add a specific file </p>
         <CodeBlock codeText={snippets.gitAddFile} />
 
-        <p className={styles.para}>You can add a specific folder</p>
+        <p className={styles.codeHead}>Add a specific folder</p>
         <CodeBlock codeText={snippets.gitAddDir} />
 
-        <p className={styles.para}>You can add all your unsaved files</p>
+        <p className={styles.codeHead}>You can add all your unsaved files</p>
         <CodeBlock codeText={snippets.gitAddAll} />
 
-        <p className={styles.para}>
+        <p className={styles.codeHead}>
           In case you've added a untracked file that you didn't want to add
         </p>
         <CodeBlock codeText={snippets.gitRestore} />
 
-        <p className={styles.para}>
+        <p className={styles.codeHead}>
           In case you've added a tracked file that you didn't want to add
         </p>
         <CodeBlock codeText={snippets.gitRestoreStaged} />
@@ -82,13 +85,15 @@ const BasicCommands = () => {
           so you can look back at it later.
         </p>
 
-        <p className={styles.para}>Simplest commit</p>
+        <p className={styles.codeHead}>Simplest commit</p>
         <CodeBlock codeText={snippets.commit} />
 
-        <p className={styles.para}>Commit with a message</p>
+        <p className={styles.codeHead}>Commit with a message</p>
         <CodeBlock codeText={snippets.commitWithMessage} />
 
-        <p className={styles.para}>Commit with a message and a description</p>
+        <p className={styles.codeHead}>
+          Commit with a message and a description
+        </p>
         <CodeBlock codeText={snippets.commitWithDescription} />
 
         <div className={styles.subsubheading}>Bad Commits</div>
@@ -159,9 +164,9 @@ const BasicCommands = () => {
           made over time.
         </p>
 
-        <p className={styles.para}>Default log</p>
+        <p className={styles.codeHead}>Default log</p>
         <CodeBlock codeText={snippets.log} />
-        <p className={styles.para}>Oneline log</p>
+        <p className={styles.codeHead}>Oneline log</p>
         <CodeBlock codeText={snippets.onelineLog} />
         <div className={styles.para}>
           <strong>NOTE</strong>: To get out of logs hit <em>q</em> on your

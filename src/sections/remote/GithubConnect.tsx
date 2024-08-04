@@ -61,10 +61,10 @@ const GithubConnect: React.FC = () => {
             </div>
           </div>
 
-          <p className={styles.para}>Add remote repository</p>
+          <p className={styles.codeHead}>Add remote repository</p>
           <CodeBlock codeText={snippets.addRemote} />
 
-          <p className={styles.para}>Verify remote repository</p>
+          <p className={styles.codeHead}>Verify remote repository</p>
           <CodeBlock codeText={snippets.verifyRemote} />
 
           <p className={styles.para}>
@@ -72,6 +72,45 @@ const GithubConnect: React.FC = () => {
             can now make changes in our local repository that can be{" "}
             <strong>pushed</strong> to this remote repository.
           </p>
+        </div>
+
+        <div className="main-branch-bit">
+          <p className={styles.codeHead}>
+            (OPTIONAL) Rename our branch to main
+          </p>
+          <CodeBlock codeText={snippets.modifyMain} />
+          <p className={styles.para}>
+            <strong>NOTE:</strong> <em>-M</em> is the <strong>Modify</strong>{" "}
+            flag, here we are changing the name of our branch to <em>main</em>{" "}
+            from <em>master</em>. However this was done because back in the day
+            the default git branch was named <em>master</em> now the default
+            branch is <em>main</em>, making this command redundant. But running
+            this command will not create any issues nonetheless.
+          </p>
+
+          <p className={styles.codeHead}>(OPTIONAL) Check your branch's name</p>
+          <CodeBlock codeText={snippets.branchName} />
+        </div>
+
+        <div className="push-to-repo">
+          <p className={styles.codeHead}>Push your commits to the repo</p>
+          <CodeBlock codeText={snippets.pushUpstream} />
+          <p className={styles.para}>
+            <strong>NOTE:</strong> <em>-u</em> is the{" "}
+            <strong>--set-upstream</strong> flag, here we are telling git that
+            the
+            <em>main</em> branch of our remote repository should mirror/track
+            the branch of our local repository that we are pushing from, which
+            also happens to be <em>main</em>. We use this command only once
+            because now git knows what our local branch should correspond to,
+            and it remembers it for us! So for all the commits that you plan on
+            pushing from this point onwards on would look like this:
+          </p>
+
+          <p className={styles.codeHead}>
+            Push your new commits from this point onwards
+          </p>
+          <CodeBlock codeText={snippets.push} />
         </div>
       </div>
     </section>
