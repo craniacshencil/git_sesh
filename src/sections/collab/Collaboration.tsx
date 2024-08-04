@@ -65,7 +65,7 @@ const Collaboration: React.FC = () => {
         <div className={styles.subheading}>
           3.2. Working on your friend's repo
         </div>
-        <div className={`${styles.subsubheading} mt-14`}>
+        <div className={`${styles.subsubheading} mt-16`}>
           3.2.1. Clone Command
         </div>
         <p className={styles.para}>
@@ -137,6 +137,69 @@ const Collaboration: React.FC = () => {
           allow anyone to commit to any repository?
           <br />
           Is this allowed with every repository on Github?
+        </p>
+      </div>
+
+      <div className="your-repo">
+        <div className={styles.subheading}>3.3. Back to your repo</div>
+        <p className={styles.para}>
+          Time to <em>git log</em> and see the changes that your friend has
+          made. What! Where are these changes? <em>style.css</em> is also
+          nowhere to be seen. Where did we go wrong? All that work for nothing?
+        </p>
+
+        <p className={styles.para}>
+          All those changes have been made in the remote repository which don't
+          get reflected directly in our remote repository. We have two choices:
+        </p>
+
+        <div className={styles.subsubheading}>
+          1. Fetch the changes and then merge them
+        </div>
+
+        <p className={styles.para}>
+          What is the difference then? In the first case, with{" "}
+          <em>fetch and merge</em>, firstly you have to fetch the changes
+          meaning only your tracking branch will be updated i.e{" "}
+          <em>orgin/main</em> not <em>main</em>
+        </p>
+
+        <p className={styles.codeHead}>Fetch Command</p>
+        <CodeBlock codeText={snippets.fetch} />
+
+        <p className={styles.para}>
+          Here you can log your remote branch and take a look at the changes
+          before merging them with your local branch
+        </p>
+
+        <p className={styles.codeHead}>Merge Command</p>
+        <CodeBlock codeText={snippets.merge} />
+
+        <div className="text-4xl my-14 text-center font-bold">OR</div>
+
+        <div className={styles.subsubheading}>2. Pull the changes</div>
+        <p className={styles.para}>
+          With <em>pull</em> you are essentially performing <em>fetch</em> and{" "}
+          <em>merge</em> in a single command
+        </p>
+
+        <p className={styles.codeHead}>Pull Command</p>
+        <CodeBlock codeText={snippets.pull} />
+
+        <div className={`${styles.subsubheading} mt-16`}>
+          3.3.1. You have done it!
+        </div>
+        <p className={styles.para}>
+          Our project is ready! Open up vscode run the live server and look at
+          it!
+        </p>
+        <p className={styles.para}>
+          But hey what if there was a secret code like an API key that we had to
+          use in the app. We can't be pushing our api keys in the public someone
+          can misuse them! Apart from an API key what if you had a feature that
+          interacted with bank accounts, what would you do to make the app work,
+          have it on github for others to work on, but still keep your
+          credentials safe?
         </p>
       </div>
     </section>
