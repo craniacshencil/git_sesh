@@ -65,9 +65,8 @@ const Collaboration: React.FC = () => {
         <div className={styles.subheading}>
           3.2. Working on your friend's repo
         </div>
-        <div className={`${styles.subsubheading} mt-14`}>
-          3.2.1. Clone Command
-        </div>
+        <br className="my-3" />
+        <div className={styles.subsubheading}>3.2.1. Clone Command</div>
         <p className={styles.para}>
           The git clone command is used to create a copy of a specific
           repository or branch from a remote source to your local machine. It

@@ -58,7 +58,7 @@ const Pages: React.FC = () => {
         </div>
       </div>
       <div className={styles.para}>
-        <strong className="text-2xl text-sky-200">
+        <strong className="text-2xl text-sky-200 fancy-regular">
           Voila! We are done, you just published your first website to the
           entire internet (maybe not for some of you). It is available for the
           general public to view and use, not just on your local machine.

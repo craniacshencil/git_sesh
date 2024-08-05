@@ -4,6 +4,7 @@ import GithubConnect from "./sections/remote/GithubConnect";
 import Collaboration from "./sections/collab/Collaboration";
 import Gitignore from "./sections/gitignore/Gitignore";
 import Pages from "./sections/pages/Pages";
+import Activity from "./sections/activity/Activity";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Collaboration />
         <Gitignore />
         <Pages />
+        <Activity />
       </main>
     </>
   );
