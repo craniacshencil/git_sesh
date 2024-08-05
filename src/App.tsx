@@ -3,6 +3,7 @@ import BasicCommands from "./sections/basic/BasicCommands";
 import GithubConnect from "./sections/remote/GithubConnect";
 import Collaboration from "./sections/collab/Collaboration";
 import Gitignore from "./sections/gitignore/Gitignore";
+import Pages from "./sections/pages/Pages";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <GithubConnect />
         <Collaboration />
         <Gitignore />
+        <Pages />
       </main>
     </>
   );
