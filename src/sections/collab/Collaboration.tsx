@@ -65,7 +65,7 @@ const Collaboration: React.FC = () => {
         <div className={styles.subheading}>
           3.2. Working on your friend's repo
         </div>
-        <div className={`${styles.subsubheading} mt-16`}>
+        <div className={`${styles.subsubheading} mt-14`}>
           3.2.1. Clone Command
         </div>
         <p className={styles.para}>
@@ -99,7 +99,7 @@ const Collaboration: React.FC = () => {
           <a
             className="cursor-pointer mt-2 text-2xl text-sky-300 hover:text-sky-200"
             target="_blank"
-            href="https://github.com/craniacshencil/temp-converter"
+            href="https://github.com/craniacshencil/temp-style/blob/main/style.css"
             rel="noreferrer noopener"
           >
             {" "}
@@ -186,7 +186,7 @@ const Collaboration: React.FC = () => {
         <p className={styles.codeHead}>Pull Command</p>
         <CodeBlock codeText={snippets.pull} />
 
-        <div className={`${styles.subsubheading} mt-16`}>
+        <div className={`${styles.subsubheading} mt-14`}>
           3.3.1. You have done it!
         </div>
         <p className={styles.para}>

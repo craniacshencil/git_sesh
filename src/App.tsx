@@ -2,6 +2,7 @@ import "./App.css";
 import BasicCommands from "./sections/basic/BasicCommands";
 import GithubConnect from "./sections/remote/GithubConnect";
 import Collaboration from "./sections/collab/Collaboration";
+import Gitignore from "./sections/gitignore/Gitignore";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <BasicCommands />
         <GithubConnect />
         <Collaboration />
+        <Gitignore />
       </main>
     </>
   );
