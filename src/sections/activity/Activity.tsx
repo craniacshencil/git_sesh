@@ -1,6 +1,5 @@
 import React from "react";
 import * as styles from "../../styles";
-import * as snippets from "./snippets";
 const Activity: React.FC = () => {
   return (
     <section className="basic-functions flex flex-col gap-4">
