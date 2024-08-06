@@ -5,6 +5,8 @@ import Collaboration from "./sections/collab/Collaboration";
 import Gitignore from "./sections/gitignore/Gitignore";
 import Pages from "./sections/pages/Pages";
 import Activity from "./sections/activity/Activity";
+import githubLogo from "./assets/github-mark-white.svg";
+import gitLogo from "./assets/git.svg";
 import { useState } from "react";
 
 function App() {
@@ -17,15 +19,16 @@ function App() {
   }
   const navEntry =
     "nav-entry border-b-2 border-zinc-700 p-2 hover:bg-gray-300 hover:text-gray-800";
+
   return (
     <>
       <div
-        className="fixed fancy-bold text-2xl left-10 cursor-pointer !hover:bg-gray-300 !hover:text-gray-800 rounded-md py-1 px-3"
+        className="z-50 fixed fancy-bold text-2xl left-10 cursor-pointer !hover:bg-gray-300 !hover:text-gray-800 rounded-md py-1 px-3"
         onMouseOver={showNav}
       >
         Nav
         <div
-          className={` ${navState} bg-zinc-900 border-2 border-gray-500 p-3 rounded-md flex flex-col gap-1 fixed left-1 top-20 text-xl fancy-regular drop-shadow-xl ease-in-out duration:300`}
+          className={` ${navState} bg-zinc-900 opacity-100 border-2 border-gray-500 p-3 rounded-md flex flex-col gap-1 fixed left-1 top-20 text-xl fancy-regular drop-shadow-xl ease-in-out duration:300`}
           onMouseLeave={hideNav}
         >
           <div className={navEntry}>
@@ -58,6 +61,21 @@ function App() {
               6. Fork & Final Activity
             </a>
           </div>
+        </div>
+      </div>
+
+      <div className="flex">
+        <div className="github-carry fixed top-5 right-5 w-1/2">
+          <img
+            className="relative left-20 bottom-20 opacity-10 w-full"
+            src={gitLogo}
+          />
+        </div>
+        <div className="git-carry fixed top-5 right-5 w-screen">
+          <img
+            className="relative bottom-5 left-5 opacity-10 rotate-45 w-1/2"
+            src={githubLogo}
+          />
         </div>
       </div>
 

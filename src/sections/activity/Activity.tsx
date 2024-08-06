@@ -170,10 +170,11 @@ const Activity: React.FC = () => {
 
         <div className={styles.subsubheading}>6.1.2. Final Goodbye!</div>
         <p className="text-2xl text-sky-200 fancy-regular">
-          Finally, no further tasks left we are done. Hope you learnt something,
-          had fun but more importantly are excited about code and engineering in
-          general! You father never was, is and will never be, but I am proud of
-          you random person.
+          Git and Github are tools that will be a part of your developer
+          workflow for a long-long time, the only way to have commands and
+          utilites on your fingertips is consistency. Finally, no further tasks
+          left we are done. Hope you learnt something, had fun but more
+          importantly are excited about code and engineering in general!
         </p>
       </div>
     </section>
