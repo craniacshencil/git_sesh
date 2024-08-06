@@ -64,19 +64,23 @@ function App() {
         </div>
       </div>
 
-      <div className="flex">
-        <div className="github-carry fixed top-5 right-5 w-1/2">
-          <img
-            className="relative left-20 bottom-20 opacity-10 w-full"
-            src={gitLogo}
-          />
-        </div>
-        <div className="git-carry fixed top-5 right-5 w-screen">
-          <img
-            className="relative bottom-5 left-5 opacity-10 rotate-45 w-1/2"
-            src={githubLogo}
-          />
-        </div>
+      <div
+        style={{ zIndex: -100 }}
+        className="git-carry fixed top-5 right-5 w-1/2"
+      >
+        <img
+          className="relative left-20 bottom-20 opacity-10 w-full"
+          src={gitLogo}
+        />
+      </div>
+      <div
+        style={{ zIndex: -100 }}
+        className="github-carry fixed top-5 right-5 w-screen"
+      >
+        <img
+          className="relative bottom-5 left-5 opacity-10 rotate-45 w-1/2"
+          src={githubLogo}
+        />
       </div>
 
       <div className="flex justify-center m-0 mb-20">
