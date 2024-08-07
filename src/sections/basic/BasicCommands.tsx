@@ -123,6 +123,10 @@ const BasicCommands = () => {
           <div>1. Make small and many commits</div>
           <div>2. Always commit when you have added something meaningful</div>
           <div>
+            3. Keep your commit title upto 50 characters max, talk in detail in
+            the description
+          </div>
+          <div>
             3. Use an Imperative tone and start your commits with a verb
           </div>
           <div>

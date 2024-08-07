@@ -14,9 +14,9 @@ const GithubConnect: React.FC = () => {
         <div className={styles.subheading}>
           2.1. Create a Github repo(without a README.md)
         </div>
-        <div className="flex justify-center">
+        <div className="flex justify-center gap-10">
           <img
-            className="m-5 rounded-md drop-shadow-2xl"
+            className={`${styles.imgTransition} m-5 rounded-md drop-shadow-2xl`}
             src={createRepo}
             alt="create-repo-image"
             width={400}
@@ -51,9 +51,9 @@ const GithubConnect: React.FC = () => {
           <div className={styles.subsubheading}>
             2.1.1. Get your remote repo link from here
           </div>
-          <div className="flex justify-center">
+          <div className="flex justify-center gap-10">
             <img
-              className="m-5 rounded-md drop-shadow-2xl"
+              className={`${styles.imgTransition} m-5 rounded-md drop-shadow-2xl`}
               src={copyLink}
               alt="copy-link-image"
               width={400}

@@ -7,6 +7,7 @@ import Pages from "./sections/pages/Pages";
 import Activity from "./sections/activity/Activity";
 import githubLogo from "./assets/github-mark-white.svg";
 import gitLogo from "./assets/git.svg";
+import navIcon from "./assets/nav.svg";
 import { useState } from "react";
 
 function App() {
@@ -23,9 +24,10 @@ function App() {
   return (
     <>
       <div
-        className="z-50 fixed fancy-bold text-2xl left-10 cursor-pointer !hover:bg-gray-300 !hover:text-gray-800 rounded-md py-1 px-3"
+        className="z-50 fixed fancy-bold cursor-pointer flex gap-3 text-2xl left-10 fcursor-pointer !hover:bg-gray-300 !hover:text-gray-800 rounded-md border-b-2 border-white py-1 px-3"
         onMouseOver={showNav}
       >
+        <img src={navIcon} width={20} height={20} alt="nav-icon"></img>
         Nav
         <div
           className={` ${navState} bg-zinc-900 opacity-100 border-2 border-gray-500 p-3 rounded-md flex flex-col gap-1 fixed left-1 top-20 text-xl fancy-regular drop-shadow-xl ease-in-out duration:300`}

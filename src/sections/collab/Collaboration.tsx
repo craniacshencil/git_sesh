@@ -1,6 +1,5 @@
 import React from "react";
 import * as snippets from "./snippets";
-// import CodeBlock from "../CodeBlock";
 import addCollab from "../../assets/add-collaborator.jpeg";
 import clickSettings from "../../assets/click-settings.jpeg";
 import collabSidebar from "../../assets/collab-sidebar.jpeg";
@@ -21,19 +20,19 @@ const Collaboration: React.FC = () => {
 
         <div className="image-steps flex flex-col">
           <div className="first-image flex justify-center gap-14">
-            <img
-              className="mt-5 mb-2 rounded-md drop-shadow-2xl w-1/2"
-              src={clickSettings}
-              alt="click-settings-image"
-            />
             <div className="text-xl self-center font-bold">
               1. Go to your repository and open the settings tab
             </div>
+            <img
+              className={`${styles.imgTransition} skew-y-3 mt-5 mb-2 rounded-md drop-shadow-2xl w-1/2`}
+              src={clickSettings}
+              alt="click-settings-image"
+            />
           </div>
 
           <div className="second-image flex justify-center gap-10">
             <img
-              className="mt-5 mb-2 rounded-md drop-shadow-2xl w-1/2"
+              className={`${styles.imgTransition} -skew-y-3 mt-5 mb-2 rounded-md drop-shadow-2xl w-1/2`}
               src={collabSidebar}
               alt="collab-sidebar-image"
             />
@@ -43,16 +42,16 @@ const Collaboration: React.FC = () => {
           </div>
 
           <div className="third-image flex justify-center gap-10">
-            <img
-              className="mt-5 mb-2 mx-0 rounded-md self-center drop-shadow-2xl w-1/2"
-              src={addCollab}
-              alt="add-collab-image"
-            />
             <div className="text-xl self-center font-bold m-0 basis-5/12">
               3. Click the add collaborators button you might be prompted to
               enter your password or maybe even 2FA. After that you will be able
               to add a collaborator by searching with their username.
             </div>
+            <img
+              className={`${styles.imgTransition} skew-y-3 mt-5 mb-2 mx-0 rounded-md self-center drop-shadow-2xl w-1/2`}
+              src={addCollab}
+              alt="add-collab-image"
+            />
           </div>
         </div>
         <div className="text-xl mt-12 text-center font-bold">

@@ -20,7 +20,7 @@ const Pages: React.FC = () => {
       <div className="image-bit flex flex-col gap-10 w-full">
         <div className="first-image flex justify-between">
           <img
-            className="mt-5 mb-2 rounded-md drop-shadow-2xl w-1/2"
+            className={`${styles.imgTransition} -skew-y-3 mt-5 mb-2 rounded-md drop-shadow-2xl w-1/2`}
             src={clickSettings}
             alt="click-settings-image"
           />
@@ -30,19 +30,19 @@ const Pages: React.FC = () => {
         </div>
 
         <div className="second-image flex justify-between">
-          <img
-            className="mt-5 mb-2 rounded-md drop-shadow-2xl w-1/2"
-            src={pagesSidebar}
-            alt="pages-sidebar-image"
-          />
           <div className="text-xl self-center font-bold">
             2. Open the pages tab from the sidebar
           </div>
+          <img
+            className={`${styles.imgTransition} skew-y-3 mt-5 mb-2 rounded-md drop-shadow-2xl w-1/2`}
+            src={pagesSidebar}
+            alt="pages-sidebar-image"
+          />
         </div>
 
         <div className="third-image flex justify-between gap-16">
           <img
-            className="mt-5 mb-2 rounded-md drop-shadow-2xl w-1/2"
+            className={`${styles.imgTransition} -skew-y-3 mt-5 mb-2 rounded-md drop-shadow-2xl w-1/2`}
             src={deploySettings}
             alt="deploy-settings-image"
           />
