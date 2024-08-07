@@ -49,3 +49,7 @@ export const log: string = `
 export const onelineLog: string = `
   git log --oneline
 `;
+
+export const diff: string = `
+  git diff 
+`;

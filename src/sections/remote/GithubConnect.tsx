@@ -56,12 +56,15 @@ const GithubConnect: React.FC = () => {
               className={`${styles.imgTransition} m-5 rounded-md drop-shadow-2xl`}
               src={copyLink}
               alt="copy-link-image"
-              width={400}
-              height={300}
+              width={800}
+              height={400}
             />
             <div className={`${styles.para} self-center`}>
-              This <em>https</em> link points to your remote repository, which
-              right now is empty.
+              This{" "}
+              <b>
+                <em>https</em>
+              </b>{" "}
+              link points to your remote repository, which right now is empty.
               <br />
             </div>
           </div>

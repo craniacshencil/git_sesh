@@ -82,9 +82,14 @@ const BasicCommands = () => {
         <CodeBlock codeText={snippets.gitAddAll} />
 
         <p className={styles.codeHead}>
-          In case you've added a untracked file that you didn't want to add
+          To remove all the changes from a file that you have already committed
         </p>
         <CodeBlock codeText={snippets.gitRestore} />
+        <p className="text-xl mt-1">
+          <strong>NOTE</strong>: Basically, to remove all the changes that you
+          have made since your last commit. The file would go back to the state
+          which it was in, in your latest commit.
+        </p>
 
         <p className={styles.codeHead}>
           In case you've added a tracked file that you didn't want to add
@@ -99,9 +104,6 @@ const BasicCommands = () => {
           It's like taking a photo of your project at a certain point in time,
           so you can look back at it later.
         </p>
-
-        <p className={styles.codeHead}>Simplest commit</p>
-        <CodeBlock codeText={snippets.commit} />
 
         <p className={styles.codeHead}>Commit with a message</p>
         <CodeBlock codeText={snippets.commitWithMessage} />
@@ -175,8 +177,30 @@ const BasicCommands = () => {
         </div>
       </div>
 
+      <div className="diff-command">
+        <div className={styles.subheading}>1.5. Diff</div>
+        <p className={styles.para}>
+          The <em>diff</em> command shows changes between the working directory
+          and the index, or between different commits. It highlights
+          line-by-line differences, helping to review code changes before
+          committing. This command is essential for tracking modifications and
+          ensuring code quality in Git repositories.
+        </p>
+
+        <p className={styles.para}>
+          As mentioned above, make changes in one of your files and run git
+          diff. (If you can see colors in the terminal) The green lines mention
+          the addtions that you've done in the file after the commit.
+          Conversely, the red lines represent the deletions that you've made in
+          the file since the commit.
+        </p>
+
+        <p className={styles.codeHead}>Simple diff command</p>
+        <CodeBlock codeText={snippets.diff} />
+      </div>
+
       <div className="log-command">
-        <div className={styles.subheading}>1.5. Log</div>
+        <div className={styles.subheading}>1.6. Log</div>
         <p className={styles.para}>
           This command shows a list of all the snapshots (commits) you've taken.
           It's like a history of your project, showing all the changes you've

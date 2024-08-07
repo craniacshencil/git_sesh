@@ -71,7 +71,7 @@ const Activity: React.FC = () => {
       </p>
 
       <div className="fork-bit">
-        <div className={styles.subheading}>6.1. Fork Utility</div>
+        <div className={styles.subheading}>6.1. Fork</div>
         <p className={styles.para}>
           Forking a repository on GitHub creates a personal copy of someone
           else's project in your own GitHub account. This allows you to freely
@@ -124,7 +124,7 @@ const Activity: React.FC = () => {
               onClick={() => toggleCheck("task1")}
             />
             <label className="pl-3 text-2xl fancy-regular" htmlFor="task1">
-              Fork the repo aforementioned repo
+              Fork the aforementioned repo
             </label>
           </div>
 

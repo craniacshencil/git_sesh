@@ -5,6 +5,7 @@ import Collaboration from "./sections/collab/Collaboration";
 import Gitignore from "./sections/gitignore/Gitignore";
 import Pages from "./sections/pages/Pages";
 import Activity from "./sections/activity/Activity";
+import Theory from "./sections/theory/Theory";
 import githubLogo from "./assets/github-mark-white.svg";
 import gitLogo from "./assets/git.svg";
 import navIcon from "./assets/nav.svg";
@@ -33,6 +34,11 @@ function App() {
           className={` ${navState} bg-zinc-900 opacity-100 border-2 border-gray-500 p-3 rounded-md flex flex-col gap-1 fixed left-1 top-20 text-xl fancy-regular drop-shadow-xl ease-in-out duration:300`}
           onMouseLeave={hideNav}
         >
+          <div className={navEntry}>
+            <a href="#theory" className="block p-0 m-0 w-full h-full">
+              0. Theory and Git Setup
+            </a>
+          </div>
           <div className={navEntry}>
             <a href="#basic" className="block p-0 m-0 w-full h-full">
               1. Basic Git Commands
@@ -91,6 +97,9 @@ function App() {
         </h1>
       </div>
       <main className="flex flex-col">
+        <div id="theory">
+          <Theory />
+        </div>
         <div id="basic">
           <BasicCommands />
         </div>
