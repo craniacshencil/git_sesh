@@ -1,6 +1,9 @@
 import * as snippets from "./snippets";
 import CodeBlock from "../CodeBlock";
 import * as styles from "../../styles";
+import cmdGui from "../../assets/memes/1_1cmdVGui.webp";
+import badCommit from "../../assets/memes/1_4badCommit.webp";
+import commitThink from "../../assets/memes/1_4commitThink.webp";
 const BasicCommands = () => {
   return (
     <section className="basic-functions flex flex-col gap-10">
@@ -19,20 +22,28 @@ const BasicCommands = () => {
         to continue
       </div>
 
-      <div className="init-command">
-        <div className={styles.subheading}>1.1. Init</div>
-        <p className={styles.para}>
-          This command creates a new Git repository in your current folder. It's
-          like starting a new project where Git will keep track of all your
-          changes.
-        </p>
+      <div className="init-meme-section flex gap-10 items-center my-7">
+        <img
+          className={styles.imgTransition}
+          src={cmdGui}
+          width={300}
+          alt="cmd-gui"
+        />
+        <div className="init-command">
+          <div className={styles.subheading}>1.1. Init</div>
+          <p className={styles.para}>
+            This command creates a new Git repository in your current folder.
+            It's like starting a new project where Git will keep track of all
+            your changes.
+          </p>
 
-        <p className={styles.codeHead}>Initialize a repository</p>
-        <CodeBlock codeText={snippets.gitInit} />
-        <p className={styles.para}>
-          <strong>NOTE</strong>: This will create a <em>.git</em> folder in your
-          directory
-        </p>
+          <p className={styles.codeHead}>Initialize a repository</p>
+          <CodeBlock codeText={snippets.gitInit} />
+          <p className={styles.para}>
+            <strong>NOTE</strong>: This will create a <em>.git</em> folder in
+            your directory
+          </p>
+        </div>
       </div>
 
       <div className="status-command">
@@ -104,6 +115,21 @@ const BasicCommands = () => {
           It's like taking a photo of your project at a certain point in time,
           so you can look back at it later.
         </p>
+
+        <div className="init-meme-section flex gap-10 items-center my-7">
+          <img
+            className={styles.imgTransition}
+            src={commitThink}
+            width={300}
+            alt="cmd-gui"
+          />
+          <img
+            className={styles.imgTransition}
+            src={badCommit}
+            width={800}
+            alt="cmd-gui"
+          />
+        </div>
 
         <p className={styles.codeHead}>Commit with a message</p>
         <CodeBlock codeText={snippets.commitWithMessage} />

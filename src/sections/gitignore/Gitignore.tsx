@@ -2,6 +2,8 @@ import React from "react";
 import CodeBlock from "../CodeBlock";
 import * as styles from "../../styles";
 import * as snippets from "./snippets";
+import ignoreCeption from "../../assets/memes/4_1mess.png";
+import nodeModules from "../../assets/memes/forgotIgnore.jpg";
 
 const Gitignore: React.FC = () => {
   return (
@@ -44,6 +46,21 @@ const Gitignore: React.FC = () => {
           <em>.gitignore</em> in your root directory. However you can also add
           it in other directories within the repo.
         </p>
+
+        <div className="flex justify-center gap-10 mb-7">
+          <img
+            className={`${styles.imgTransition} m-5 `}
+            src={ignoreCeption}
+            alt="ignore-ception-image"
+            width={1200}
+          />
+          <img
+            className={`${styles.imgTransition} m-5 `}
+            src={nodeModules}
+            alt="node-modules-image"
+            width={400}
+          />
+        </div>
 
         <p className={styles.subsubheading}>
           4.1.1. A few Examples of <em>.gitignore</em> files serving different

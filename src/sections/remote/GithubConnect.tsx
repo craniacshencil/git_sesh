@@ -4,6 +4,7 @@ import CodeBlock from "../CodeBlock";
 import * as styles from "../../styles";
 import createRepo from "../../assets/create-repo.jpeg";
 import copyLink from "../../assets/copy-link.jpeg";
+import pushOrder from "../../assets/memes/2_0push.webp";
 
 const GithubConnect: React.FC = () => {
   return (
@@ -16,7 +17,7 @@ const GithubConnect: React.FC = () => {
         </div>
         <div className="flex justify-center gap-10">
           <img
-            className={`${styles.imgTransition} m-5 rounded-md drop-shadow-2xl`}
+            className={`${styles.imgTransition} m-5 `}
             src={createRepo}
             alt="create-repo-image"
             width={400}
@@ -100,25 +101,33 @@ const GithubConnect: React.FC = () => {
           <CodeBlock codeText={snippets.branchName} />
         </div>
 
-        <div className="push-to-repo">
-          <p className={styles.codeHead}>Push your commits to the repo</p>
-          <CodeBlock codeText={snippets.pushUpstream} />
-          <p className={styles.para}>
-            <strong>NOTE:</strong> <em>-u</em> is the{" "}
-            <strong>--set-upstream</strong> flag, here we are telling git that
-            the <em>main</em> branch of our remote repository should
-            mirror/track the branch of our local repository that we are pushing
-            from, which also happens to be <em>main</em>. We use this command
-            only once because now git knows what our local branch should
-            correspond to, and it remembers it for us! So for all the commits
-            that you plan on pushing from this point onwards on would look like
-            this:
-          </p>
+        <div className="push-to-repo flex gap-10 my-14">
+          <img
+            className={styles.imgTransition}
+            src={pushOrder}
+            width={400}
+            alt="commit-order"
+          />
+          <div className="push-theory">
+            <p className={styles.codeHead}>Push your commits to the repo</p>
+            <CodeBlock codeText={snippets.pushUpstream} />
+            <p className={styles.para}>
+              <strong>NOTE:</strong> <em>-u</em> is the{" "}
+              <strong>--set-upstream</strong> flag, here we are telling git that
+              the <em>main</em> branch of our remote repository should
+              mirror/track the branch of our local repository that we are
+              pushing from, which also happens to be <em>main</em>. We use this
+              command only once because now git knows what our local branch
+              should correspond to, and it remembers it for us! So for all the
+              commits that you plan on pushing from this point onwards on would
+              look like this:
+            </p>
 
-          <p className={styles.codeHead}>
-            Push your new commits from this point onwards
-          </p>
-          <CodeBlock codeText={snippets.push} />
+            <p className={styles.codeHead}>
+              Push your new commits from this point onwards
+            </p>
+            <CodeBlock codeText={snippets.push} />
+          </div>
         </div>
       </div>
     </section>
