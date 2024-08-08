@@ -50,7 +50,7 @@ const GithubConnect: React.FC = () => {
 
         <div className="remote-repo-link">
           <div className={styles.subsubheading}>
-            2.1.1. Get your remote repo link from here
+            2.2.1. Get your remote repo link from here
           </div>
           <div className="flex justify-center gap-10">
             <img
@@ -128,6 +128,14 @@ const GithubConnect: React.FC = () => {
             </p>
             <CodeBlock codeText={snippets.push} />
           </div>
+        </div>
+
+        <div className="4-step-journey">
+          <div className={styles.subheading}>2.3. The 4 step journey</div>
+          <p className="text-center text-sky-200 fancy-bold text-3xl my-12">
+            {" "}
+            Draw it on your own
+          </p>
         </div>
       </div>
     </section>
