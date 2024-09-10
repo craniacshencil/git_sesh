@@ -70,11 +70,19 @@ const GithubConnect: React.FC = () => {
             </div>
           </div>
 
-          <p className={styles.codeHead}>Add remote repository</p>
-          <CodeBlock codeText={snippets.addRemote} />
+          <p className={styles.codeHead}>1. Add remote repository</p>
+          <CodeBlock
+            codeText={snippets.addRemote}
+            imp={true}
+            outText={snippets.addRemoteOut}
+          />
 
-          <p className={styles.codeHead}>Verify remote repository</p>
-          <CodeBlock codeText={snippets.verifyRemote} />
+          <p className={styles.codeHead}>2. Verify remote repository</p>
+          <CodeBlock
+            codeText={snippets.verifyRemote}
+            imp={true}
+            outText={snippets.verifyRemoteOut}
+          />
 
           <p className={styles.para}>
             So now we have successfully connected to our remote repository! We
@@ -84,10 +92,12 @@ const GithubConnect: React.FC = () => {
         </div>
 
         <div className="main-branch-bit">
-          <p className={styles.codeHead}>
-            (OPTIONAL) Rename our branch to main
-          </p>
-          <CodeBlock codeText={snippets.modifyMain} />
+          <p className={styles.codeHead}>3. Rename our branch to main</p>
+          <CodeBlock
+            codeText={snippets.modifyMain}
+            imp={true}
+            outText={snippets.modifyMainOut}
+          />
           <p className={styles.para}>
             <strong>NOTE:</strong> <em>-M</em> is the <strong>Modify</strong>{" "}
             flag, here we are changing the name of our branch to <em>main</em>{" "}
@@ -97,20 +107,28 @@ const GithubConnect: React.FC = () => {
             this command will not create any issues nonetheless.
           </p>
 
-          <p className={styles.codeHead}>(OPTIONAL) Check your branch's name</p>
-          <CodeBlock codeText={snippets.branchName} />
+          <p className={styles.codeHead}>4. Check your branch's name</p>
+          <CodeBlock
+            codeText={snippets.branchName}
+            imp={true}
+            outText={snippets.branchNameOut}
+          />
         </div>
 
         <div className="push-to-repo flex gap-10 my-14">
           <img
-            className={styles.imgTransition}
+            className={`${styles.imgTransition} max-h-fit self-start`}
             src={pushOrder}
             width={400}
             alt="commit-order"
           />
           <div className="push-theory">
-            <p className={styles.codeHead}>Push your commits to the repo</p>
-            <CodeBlock codeText={snippets.pushUpstream} />
+            <p className={styles.codeHead}>5. Push your commits to the repo</p>
+            <CodeBlock
+              codeText={snippets.pushUpstream}
+              imp={true}
+              outText={snippets.pushUpstreamOut}
+            />
             <p className={styles.para}>
               <strong>NOTE:</strong> <em>-u</em> is the{" "}
               <strong>--set-upstream</strong> flag, here we are telling git that
@@ -124,9 +142,13 @@ const GithubConnect: React.FC = () => {
             </p>
 
             <p className={styles.codeHead}>
-              Push your new commits from this point onwards
+              6. Push your new commits from this point onwards
             </p>
-            <CodeBlock codeText={snippets.push} />
+            <CodeBlock
+              codeText={snippets.push}
+              imp={true}
+              outText={snippets.pushOut}
+            />
           </div>
         </div>
 

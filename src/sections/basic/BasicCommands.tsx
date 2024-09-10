@@ -25,7 +25,7 @@ const BasicCommands = () => {
 
       <div className="init-meme-section flex gap-10 items-center my-7">
         <img
-          className={styles.imgTransition}
+          className={`${styles.imgTransition} self-start`}
           src={cmdGui}
           width={300}
           alt="cmd-gui"
