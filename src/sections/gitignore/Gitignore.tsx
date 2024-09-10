@@ -1,5 +1,5 @@
 import React from "react";
-import CodeBlock from "../CodeBlock";
+import CodeBlock from "../../components/CodeBlock";
 import * as styles from "../../styles";
 import * as snippets from "./snippets";
 import ignoreCeption from "../../assets/memes/4_1mess.png";

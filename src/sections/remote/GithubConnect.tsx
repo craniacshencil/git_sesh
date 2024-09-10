@@ -1,6 +1,6 @@
 import React from "react";
 import * as snippets from "./snippets";
-import CodeBlock from "../CodeBlock";
+import CodeBlock from "../../components/CodeBlock";
 import * as styles from "../../styles";
 import createRepo from "../../assets/create-repo.jpeg";
 import copyLink from "../../assets/copy-link.jpeg";

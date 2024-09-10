@@ -1,9 +1,10 @@
 import * as snippets from "./snippets";
-import CodeBlock from "../CodeBlock";
+import CodeBlock from "../../components/CodeBlock";
 import * as styles from "../../styles";
 import cmdGui from "../../assets/memes/1_1cmdVGui.webp";
 import badCommit from "../../assets/memes/1_4badCommit.webp";
 import commitThink from "../../assets/memes/1_4commitThink.webp";
+import CustomCheckbox from "../../components/CustomCheckbox";
 const BasicCommands = () => {
   return (
     <section className="basic-functions flex flex-col gap-10">
@@ -37,8 +38,12 @@ const BasicCommands = () => {
             your changes.
           </p>
 
-          <p className={styles.codeHead}>Initialize a repository</p>
-          <CodeBlock codeText={snippets.gitInit} />
+          <p className={styles.codeHead}>1. Initialize a repository</p>
+          <CodeBlock
+            codeText={snippets.gitInit}
+            imp={true}
+            outText={snippets.gitInitOut}
+          />
           <p className={styles.para}>
             <strong>NOTE</strong>: This will create a <em>.git</em> folder in
             your directory
@@ -53,8 +58,12 @@ const BasicCommands = () => {
           which files have changed and which ones are ready to be saved.
         </p>
 
-        <p className={styles.codeHead}>Check status of all files</p>
-        <CodeBlock codeText={snippets.gitStatus} />
+        <p className={styles.codeHead}>2. Check status of all files</p>
+        <CodeBlock
+          codeText={snippets.gitStatus}
+          imp={true}
+          outText={snippets.gitStatusOut}
+        />
 
         <p className={styles.para}>
           <div className={styles.subsubheading}>1.2.1. File statuses:</div>
@@ -81,31 +90,51 @@ const BasicCommands = () => {
           snapshot of your project.
         </p>
 
-        <p className={styles.codeHead}>Add a specific file </p>
-        <CodeBlock codeText={snippets.gitAddFile} />
+        <p className={styles.codeHead}>3. Add a specific file </p>
+        <CodeBlock
+          codeText={snippets.gitAddFile}
+          imp={true}
+          outText={snippets.gitAddFileOut}
+        />
+
+        <div className={styles.infoBox}>
+          Psst! You need to go commit now!
+          <a
+            className="cursor-pointer mt-2 text-2xl text-sky-300 hover:text-sky-200"
+            href="#commit-with-message"
+          >
+            {" "}
+            run this command{" "}
+          </a>
+          to continue
+        </div>
 
         <p className={styles.codeHead}>Add a specific folder</p>
-        <CodeBlock codeText={snippets.gitAddDir} />
+        <CodeBlock
+          codeText={snippets.gitAddDir}
+          imp={false}
+          outText={snippets.gitAddDirOut}
+        />
 
         <p className={styles.codeHead}>
-          You can add all your unsaved files from the root of your project
+          5. You can add all your unsaved files from the root of your project
         </p>
-        <CodeBlock codeText={snippets.gitAddAll} />
+        <CodeBlock
+          codeText={snippets.gitAddAll}
+          imp={true}
+          outText={snippets.gitAddAllOut}
+        />
 
-        <p className={styles.codeHead}>
-          To remove all the changes from a file that you have already committed
-        </p>
-        <CodeBlock codeText={snippets.gitRestore} />
-        <p className="text-xl mt-1">
-          <strong>NOTE</strong>: Basically, to remove all the changes that you
-          have made since your last commit. The file would go back to the state
-          which it was in, in your latest commit.
-        </p>
-
-        <p className={styles.codeHead}>
-          In case you've added a tracked file that you didn't want to add
-        </p>
-        <CodeBlock codeText={snippets.gitRestoreStaged} />
+        <div className={styles.infoBox}>
+          Psst! You need to go commit again!
+          <a
+            className="cursor-pointer mt-2 text-2xl text-sky-300 hover:text-sky-200"
+            href="#commit-with-desc"
+          >
+            {" "}
+            run this new command{" "}
+          </a>
+        </div>
       </div>
 
       <div className="commit-command">
@@ -131,13 +160,32 @@ const BasicCommands = () => {
           />
         </div>
 
-        <p className={styles.codeHead}>Commit with a message</p>
-        <CodeBlock codeText={snippets.commitWithMessage} />
-
-        <p className={styles.codeHead}>
-          Commit with a message and a description
+        <p id="commit-with-message" className={styles.codeHead}>
+          4. Commit with a message{" "}
+          <em className="text-sky-200">
+            (Run this one after adding index.html)
+          </em>
         </p>
-        <CodeBlock codeText={snippets.commitWithDescription} />
+
+        <CodeBlock
+          codeText={snippets.commitWithMessage}
+          imp={true}
+          outText={snippets.commitWithMessageOut}
+        />
+
+        <p id="commit-with-desc" className={styles.codeHead}>
+          6. Commit with a message and a description
+          <em className="text-sky-200">
+            {" "}
+            (Run this one after adding all files)
+          </em>
+        </p>
+
+        <CodeBlock
+          codeText={snippets.commitWithDescription}
+          imp={true}
+          outText={snippets.commitWithDescriptionOut}
+        />
 
         <div className={styles.subsubheading}>Bad Commits</div>
         <p className={styles.para}>
@@ -203,8 +251,43 @@ const BasicCommands = () => {
         </div>
       </div>
 
+      <div className="log-command">
+        <div className={styles.subheading}>1.5. Log</div>
+        <p className={styles.para}>
+          This command shows a list of all the snapshots (commits) you've taken.
+          It's like a history of your project, showing all the changes you've
+          made over time.
+        </p>
+
+        <p className={styles.codeHead}>7. Default log</p>
+        <CodeBlock
+          codeText={snippets.log}
+          imp={true}
+          outText={snippets.logOut}
+        />
+        <p className={styles.codeHead}>8. Oneline log</p>
+        <CodeBlock
+          codeText={snippets.onelineLog}
+          imp={true}
+          outText={snippets.onelineLogOut}
+        />
+        <div className={styles.para}>
+          <strong>NOTE</strong>: To get out of logs hit <em>q</em> on your
+          keyboard, git log follows{" "}
+          <a
+            className="cursor-pointer mt-2 text-xl text-sky-300 hover:text-sky-200"
+            target="_blank"
+            href="https://en.wikipedia.org/wiki/Vim_(text_editor)"
+            rel="noreferrer noopener"
+          >
+            vim
+          </a>{" "}
+          bindings
+        </div>
+      </div>
+
       <div className="diff-command">
-        <div className={styles.subheading}>1.5. Diff</div>
+        <div className={styles.subheading}>1.6. Diff</div>
         <p className={styles.para}>
           The <em>diff</em> command shows changes between the working directory
           and the index, or between different commits. It highlights
@@ -221,34 +304,26 @@ const BasicCommands = () => {
           the file since the commit.
         </p>
 
-        <p className={styles.codeHead}>Simple diff command</p>
-        <CodeBlock codeText={snippets.diff} />
-      </div>
+        <p className={styles.codeHead}>9. Simple diff command</p>
+        <CodeBlock
+          codeText={snippets.diff}
+          imp={true}
+          outText={snippets.diffOut}
+        />
 
-      <div className="log-command">
-        <div className={styles.subheading}>1.6. Log</div>
-        <p className={styles.para}>
-          This command shows a list of all the snapshots (commits) you've taken.
-          It's like a history of your project, showing all the changes you've
-          made over time.
-        </p>
-
-        <p className={styles.codeHead}>Default log</p>
-        <CodeBlock codeText={snippets.log} />
-        <p className={styles.codeHead}>Oneline log</p>
-        <CodeBlock codeText={snippets.onelineLog} />
-        <div className={styles.para}>
-          <strong>NOTE</strong>: To get out of logs hit <em>q</em> on your
-          keyboard, git log follows{" "}
-          <a
-            className="cursor-pointer mt-2 text-xl text-sky-300 hover:text-sky-200"
-            target="_blank"
-            href="https://en.wikipedia.org/wiki/Vim_(text_editor)"
-            rel="noreferrer noopener"
-          >
-            vim
-          </a>{" "}
-          bindings
+        <div className="activity-section mb-10">
+          <div className={styles.subheading}>1.7. Activity-1</div>
+          <p className="py-7 text-3xl text-sky-200 fancy-bold">
+            Time for a test, Lets see <em>git diff</em> in action!
+          </p>
+          <div className="first-activity-steps flex flex-col gap-2">
+            <CustomCheckbox labelName="Remove the goofy line (last line) from the README.md" />
+            <CustomCheckbox labelName="Write your own line in README.md" />
+            <CustomCheckbox labelName='"diff" the file to see the modifications since last commit (tell us what you see)' />
+            <CustomCheckbox labelName='"add" the file to your local repository' />
+            <CustomCheckbox labelName='Make a "commit" with an appropriate message' />
+            <CustomCheckbox labelName='Confirm the commit by looking at the "log"' />
+          </div>
         </div>
       </div>
     </section>

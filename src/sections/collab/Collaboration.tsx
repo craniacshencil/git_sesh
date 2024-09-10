@@ -4,7 +4,7 @@ import addCollab from "../../assets/add-collaborator.jpeg";
 import clickSettings from "../../assets/click-settings.jpeg";
 import collabSidebar from "../../assets/collab-sidebar.jpeg";
 import * as styles from "../../styles";
-import CodeBlock from "../CodeBlock";
+import CodeBlock from "../../components/CodeBlock";
 
 const Collaboration: React.FC = () => {
   return (
@@ -73,19 +73,29 @@ const Collaboration: React.FC = () => {
           on the project locally.
         </p>
 
-        <p className={styles.codeHead}>Simple clone</p>
-        <CodeBlock codeText={snippets.clone} />
+        <p className={styles.codeHead}>1. Simple clone</p>
+        <CodeBlock
+          codeText={snippets.clone}
+          imp={true}
+          outText={snippets.cloneOut}
+        />
 
         <p className={styles.codeHead}>Clone with folder name </p>
-        <CodeBlock codeText={snippets.cloneCustom} />
-        <p className="text-xl mb-10">
+        <CodeBlock
+          codeText={snippets.cloneCustom}
+          imp={false}
+          outText={snippets.cloneCustomOut}
+        />
+        <p className={styles.para}>
           <strong>NOTE:</strong> This simply means that your friend's repository
           will be cloned under the name <em>my_folder</em>.
         </p>
 
         <div className={styles.subsubheading}>3.2.2. style.css</div>
+        <p className={styles.codeHead}>2. Create a file style.css</p>
+        <CodeBlock codeText={snippets.createStyles} imp={true} />
         <p className={styles.para}>
-          Create a file <em>style.css</em>{" "}
+          {" "}
           <strong>(Strictly use this name for the file)</strong> in the root
           directory to apply styling to your friend's webapp. Copy all the
           contents from the following file into your friend's <em>style.css</em>

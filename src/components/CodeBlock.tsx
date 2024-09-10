@@ -13,6 +13,7 @@ interface codeBlockProps {
 
 interface codeOutProps {
   outText: string;
+  className: string;
   imp: boolean;
 }
 
@@ -49,7 +50,7 @@ const CodeBlock: React.FC<codeBlockProps> = ({ codeText, imp, outText }) => {
         <pre>
           <code className="text-md">{codeText}</code>
         </pre>
-        <div className="icon-field flex gap-5">
+        <div className="icon-field flex gap-5 self-start mt-2">
           <img
             className="cursor-pointer self-start mt-2"
             src={icon}
@@ -68,20 +69,26 @@ const CodeBlock: React.FC<codeBlockProps> = ({ codeText, imp, outText }) => {
           />
         </div>
       </div>
-      {toggleOutput && <CodeOut imp={imp} outText={outText} />}
+      <CodeOut
+        className={`${toggleOutput ? "opacity-90 transition-opacity ease-linear duration-300 scale-100" : "opacity-0 max-w-0 max-h-0"}`}
+        imp={imp}
+        outText={outText}
+      />
     </div>
   );
 };
 
-const CodeOut: React.FC<codeOutProps> = ({ outText, imp }) => {
+const CodeOut: React.FC<codeOutProps> = ({ className, outText, imp }) => {
   return (
     <div
-      className={`m-0 mt-0 opacity-90 border-t-2 border-gray-300 mb-7 px-3 pb-5 rounded-b-md transiton-all ease-in-out delay-300 duration-700 transform
-${clsx({ "bg-fuchsia-950": imp }, { "bg-gray-800": !imp })}`}
+      className={`${className} m-0 mt-0 border-t-2 border-gray-300 mb-7 px-3 pb-5 rounded-b-md 
+      ${clsx({ "bg-fuchsia-950": imp }, { "bg-gray-800": !imp })}`}
     >
-      <p className="p-2 pb-0 mb-0 text-xl font-bold">Sample Output:</p>
       <pre>
-        <code className="mt-0 text-md">{outText}</code>
+        <p className="block underline decoration-gray-400 pt-5 pl-5 pb-0 mb-0 text-xl font-bold">
+          Sample Output:
+        </p>
+        <code className="pt-0 mt-0 text-md overflow-x-auto">{outText}</code>
       </pre>
     </div>
   );

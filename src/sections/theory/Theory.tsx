@@ -8,7 +8,7 @@ import wordFiles from "../../assets/memes/0_4drivefile.png";
 import whyGit from "../../assets/whyGit.jpeg";
 import gitVGithub from "../../assets/gitVsGithub.jpeg";
 import gitGithubMeme from "../../assets/memes/0_5gitVsGithub.webp";
-import CodeBlock from "../CodeBlock";
+import CodeBlock from "../../components/CodeBlock";
 const Theory: React.FC = () => {
   return (
     <section className="basic-functions flex flex-col gap-10">
@@ -30,18 +30,34 @@ const Theory: React.FC = () => {
       </div>
       <div className={styles.subheading}>0.1. Setup</div>
       <div className="setup-section">
-        <p className={styles.para}>
-          <b>
-            Open up git bash and enter the following commands. For the entirety
-            of the session we'll be using git bash
-          </b>
+        <p className="text-2xl fancy-bold text-sky-200">
+          Open git bash and enter the following commands. For the entirety
+          session we'll be using git bash.
         </p>
 
         <div className={styles.codeHead}>
-          Git config for commiting and connecting to GitHub
+          1. Git config for commiting and connecting to GitHub
         </div>
 
-        <CodeBlock codeText={snippets.config} />
+        <CodeBlock
+          codeText={snippets.config}
+          imp={true}
+          outText={snippets.configOut}
+        />
+
+        <div className={styles.codeHead}>2. Verify username</div>
+        <CodeBlock
+          codeText={snippets.username}
+          imp={true}
+          outText={snippets.usernameOut}
+        />
+
+        <div className={styles.codeHead}>3. Verify email</div>
+        <CodeBlock
+          codeText={snippets.email}
+          imp={true}
+          outText={snippets.emailOut}
+        />
       </div>
       <div className="theory-section">
         <div className={styles.subheading}>0.2. Why not Drive?</div>
