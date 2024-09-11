@@ -5,10 +5,20 @@ import * as snippets from "./snippets";
 import ignoreCeption from "../../assets/memes/4_1mess.png";
 import nodeModules from "../../assets/memes/forgotIgnore.jpg";
 
-const Gitignore: React.FC = () => {
+const Readme: React.FC = () => {
   return (
     <section className="basic-functions flex flex-col gap-7">
       <div className={styles.heading}>4. Exploring .gitignore & README.md</div>
+      <p className="text-xl">
+        But hey what if there was a secret code like an API key that we had to
+        use in the app.
+        <br className="my-2" />
+        We can't be pushing our api keys in the public someone can misuse them!
+        <br className="my-2" />
+        Apart from an API key what if you had a feature that interacted with
+        bank accounts, what would you do to make the app work, have it on github
+        for others to work on, but still keep your credentials safe?
+      </p>
       <div className="gitignore-bit">
         <div className={styles.subheading}>4.1. .gitignore in action</div>
         <p className={styles.para}>
@@ -31,15 +41,6 @@ const Gitignore: React.FC = () => {
             <strong>(Yes literally the file name is ".gitignore")</strong>
           </div>
         </p>
-
-        <p className={styles.codeHead}>
-          Add the following to your <em>.gitignore</em>
-        </p>
-        <CodeBlock codeText={snippets.topSecret} />
-        <p className={styles.codeHead}>
-          You can also add an entire directory (in .gitignore)
-        </p>
-        <CodeBlock codeText={snippets.secretDirectory} />
 
         <p className={styles.para}>
           <strong>NOTE</strong>: It is best practice to have your{" "}
@@ -135,4 +136,4 @@ const Gitignore: React.FC = () => {
   );
 };
 
-export default Gitignore;
+export default Readme;

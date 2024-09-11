@@ -5,6 +5,7 @@ import clickSettings from "../../assets/click-settings.jpeg";
 import collabSidebar from "../../assets/collab-sidebar.jpeg";
 import * as styles from "../../styles";
 import CodeBlock from "../../components/CodeBlock";
+import CustomCheckbox from "../../components/CustomCheckbox";
 
 const Collaboration: React.FC = () => {
   return (
@@ -66,6 +67,20 @@ const Collaboration: React.FC = () => {
         </div>
         <br className="my-3" />
         <div className={styles.subsubheading}>3.2.1. Clone Command</div>
+
+        <div className={styles.warningBox}>
+          Get out of your repository!! Clone outside of your repository!!
+        </div>
+
+        <p className={styles.codeHead}>
+          1. Get out of your repository (Do this once only!)
+        </p>
+        <CodeBlock
+          codeText={snippets.backwardCd}
+          imp={true}
+          outText={snippets.backwardCdOut}
+        />
+
         <p className={styles.para}>
           The git clone command is used to create a copy of a specific
           repository or branch from a remote source to your local machine. It
@@ -73,7 +88,7 @@ const Collaboration: React.FC = () => {
           on the project locally.
         </p>
 
-        <p className={styles.codeHead}>1. Simple clone</p>
+        <p className={styles.codeHead}>2. Simple clone</p>
         <CodeBlock
           codeText={snippets.clone}
           imp={true}
@@ -92,8 +107,24 @@ const Collaboration: React.FC = () => {
         </p>
 
         <div className={styles.subsubheading}>3.2.2. style.css</div>
-        <p className={styles.codeHead}>2. Create a file style.css</p>
-        <CodeBlock codeText={snippets.createStyles} imp={true} />
+
+        <div className={styles.warningBox}>
+          Get inside your friend's repository
+        </div>
+
+        <p className={styles.codeHead}>3. Enter friend's directory</p>
+        <CodeBlock
+          codeText={snippets.cdFriend}
+          imp={true}
+          outText={snippets.cdFriendOut}
+        />
+
+        <p className={styles.codeHead}>4. Create a file style.css</p>
+        <CodeBlock
+          codeText={snippets.createStyles}
+          imp={true}
+          outText={snippets.createStylesOut}
+        />
         <p className={styles.para}>
           {" "}
           <strong>(Strictly use this name for the file)</strong> in the root
@@ -115,11 +146,15 @@ const Collaboration: React.FC = () => {
           </a>
         </div>
 
-        <p className={styles.para}>
-          Now try running <em>git branch</em>. What?!?! There's already a git
-          repository here. Running <em>git log</em> will also show you the
-          history of commits.
+        <p className="text-2xl fancy-regular text-sky-200 my-7">
+          Now try looking at the branches. What?!?! There's already a git
+          repository here. Also look at the history of commits.
         </p>
+
+        <div className="minor-self-evaluation flex-col gap-2">
+          <CustomCheckbox labelName="What branches exist in the repository?" />
+          <CustomCheckbox labelName="Look at the commit history" />
+        </div>
         <p className={styles.para}>
           Notice something weird? When we downloaded the zip of a repository (at
           the very first line of this doc) we had to create our own repository
@@ -134,10 +169,16 @@ const Collaboration: React.FC = () => {
           folder but also the repository.
         </p>
 
-        <p className={styles.para}>
+        <p className="text-2xl text-sky-200 fancy-regular mb-4">
           Since we have a repository already, you know the drill. Add the file,
           commit it and push it.
         </p>
+
+        <div className="minor-self-evaluation-2 flex-col gap-2">
+          <CustomCheckbox labelName='"add" the styles.css file' />
+          <CustomCheckbox labelName='"commit" with an appropriate message' />
+          <CustomCheckbox labelName='"push" changes to the repository belonging to your friend' />
+        </div>
 
         <p className={styles.para}>
           Wait, this isn't your repository, it isn't linked with your account
@@ -149,11 +190,21 @@ const Collaboration: React.FC = () => {
       </div>
 
       <div className="your-repo">
-        <div className={styles.subheading}>3.3. Back to your repo</div>
+        <div className={`${styles.subheading} mb-5`}>
+          3.3. Back to your repo
+        </div>
+
+        <CustomCheckbox labelName="Check your commit history to see your friend's changes" />
+
         <p className={styles.para}>
-          Time to <em>git log</em> and see the changes that your friend has
-          made. What! Where are these changes? <em>style.css</em> is also
-          nowhere to be seen. Where did we go wrong? All that work for nothing?
+          Time to see the changes that your friend has made. What! Where are
+          these changes? <em>style.css</em> is also nowhere to be seen. Where
+          did we go wrong? All that work for nothing?
+        </p>
+
+        <p className={styles.para}>
+          Chill out and open your github account and see the repository, it
+          might answer your questions
         </p>
 
         <p className={styles.para}>
@@ -165,6 +216,13 @@ const Collaboration: React.FC = () => {
           1. Fetch the changes and then merge them
         </div>
 
+        <p className={styles.codeHead}> Notice the state of branches</p>
+        <CodeBlock
+          codeText={snippets.logBeforeFetch}
+          imp={false}
+          outText={snippets.logBeforeFetchOut}
+        />
+
         <p className={styles.para}>
           What is the difference then? In the first case, with{" "}
           <em>fetch and merge</em>, firstly you have to fetch the changes
@@ -173,15 +231,45 @@ const Collaboration: React.FC = () => {
         </p>
 
         <p className={styles.codeHead}>Fetch Command</p>
-        <CodeBlock codeText={snippets.fetch} />
+        <CodeBlock
+          codeText={snippets.fetch}
+          imp={false}
+          outText={snippets.fetchOut}
+        />
+
+        <p className={styles.codeHead}>Logging after fetch</p>
+        <CodeBlock
+          codeText={snippets.logAfterFetch}
+          imp={false}
+          outText={snippets.logAfterFetchOut}
+        />
 
         <p className={styles.para}>
-          Here you can log your remote branch and take a look at the changes
-          before merging them with your local branch
+          {" "}
+          Wait, the new commit is nowhere to be seen! Notice, how the{" "}
+          <em>origin/main</em> tag from the previous <em>git log</em> has also
+          disappeared. The fetch was successful but where is our friend's commit
+          now?
         </p>
 
+        <p className={styles.para}>
+          With this method we can log our remote branch and take a look at the
+          changes before merging them with our local branch
+        </p>
+
+        <p className={styles.codeHead}>Logging after fetch</p>
+        <CodeBlock
+          codeText={snippets.specialLog}
+          imp={false}
+          outText={snippets.specialLogOut}
+        />
+
         <p className={styles.codeHead}>Merge Command</p>
-        <CodeBlock codeText={snippets.merge} />
+        <CodeBlock
+          codeText={snippets.merge}
+          imp={false}
+          outText={snippets.mergeOut}
+        />
 
         <div className="text-4xl my-14 text-center font-bold">OR</div>
 
@@ -191,24 +279,46 @@ const Collaboration: React.FC = () => {
           <em>merge</em> in a single command
         </p>
 
-        <p className={styles.codeHead}>Pull Command</p>
-        <CodeBlock codeText={snippets.pull} />
+        <p className={styles.codeHead}>5. Pull Command</p>
+        <CodeBlock
+          codeText={snippets.pull}
+          imp={true}
+          outText={snippets.pullOut}
+        />
 
-        <div className={`${styles.subsubheading} mt-14`}>
-          3.3.1. You have done it!
+        <div className={`${styles.subheading} mt-14`}>
+          3.4. You have done it!{" "}
+          <em className="line-through text-green-300">(or have you?)</em>
         </div>
         <p className={styles.para}>
           Our project is ready! Open up vscode run the live server and look at
           it!
         </p>
-        <p className={styles.para}>
-          But hey what if there was a secret code like an API key that we had to
-          use in the app. We can't be pushing our api keys in the public someone
-          can misuse them! Apart from an API key what if you had a feature that
-          interacted with bank accounts, what would you do to make the app work,
-          have it on github for others to work on, but still keep your
-          credentials safe?
+
+        <p className="text-sky-200 text-3xl fancy-bold my-5">
+          You have forgotten to give yourself and your friend credits in the
+          footer.
         </p>
+        <div className="collab-activity flex flex-col gap-5 mb-7">
+          <div className="friend-wrapper">
+            <CustomCheckbox labelName="Friend's repo part" />
+            <div className="friend-part-activity ml-10 mt-2 flex flex-col gap-2">
+              <CustomCheckbox labelName="Enter your friend's repository" />
+              <CustomCheckbox labelName="In index.html, change the names to include your and your friend's name" />
+              <CustomCheckbox labelName='"add" the file' />
+              <CustomCheckbox labelName='"commit" to the repository' />
+              <CustomCheckbox labelName='"push" to the repository' />
+            </div>
+          </div>
+          <div className="your-wrapper">
+            <CustomCheckbox labelName="Your repo part" />
+            <div className="friend-part-activity ml-10 mt-2 flex flex-col gap-3">
+              <CustomCheckbox labelName="Enter your own repository" />
+              <CustomCheckbox labelName="Fetch and merge your friend's changes" />
+              <CustomCheckbox labelName="Show us your running site!" />
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

@@ -2,7 +2,7 @@ import "./App.css";
 import BasicCommands from "./sections/basic/BasicCommands";
 import GithubConnect from "./sections/remote/GithubConnect";
 import Collaboration from "./sections/collab/Collaboration";
-import Gitignore from "./sections/gitignore/Gitignore";
+import Readme from "./sections/readme/Readme";
 import Pages from "./sections/pages/Pages";
 import Activity from "./sections/activity/Activity";
 import Theory from "./sections/theory/Theory";
@@ -55,8 +55,8 @@ function App() {
             </a>
           </div>
           <div className={navEntry}>
-            <a href="#gitignore" className="block p-0 m-0 w-full h-full">
-              4. Exploring .gitignore & README.md
+            <a href="#readme" className="block p-0 m-0 w-full h-full">
+              4. .gitignore & README.md
             </a>
           </div>
           <div className={navEntry}>
@@ -109,8 +109,8 @@ function App() {
         <div id="collab">
           <Collaboration />
         </div>
-        <div id="gitignore">
-          <Gitignore />
+        <div id="readme">
+          <Readme />
         </div>
         <div id="pages">
           <Pages />

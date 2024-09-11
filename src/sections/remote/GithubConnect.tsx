@@ -122,8 +122,10 @@ const GithubConnect: React.FC = () => {
             width={400}
             alt="commit-order"
           />
-          <div className="push-theory">
-            <p className={styles.codeHead}>5. Push your commits to the repo</p>
+          <div className="push-theory m-0 self-start">
+            <p className="text-2xl mb-2 fancy-italic">
+              5. Push your commits to the repo
+            </p>
             <CodeBlock
               codeText={snippets.pushUpstream}
               imp={true}

@@ -8,5 +8,7 @@ export const para: string = "my-7 text-xl";
 export const codeHead: string = "text-2xl mt-12 mb-2 fancy-italic";
 export const infoBox: string =
   "text-2xl p-3 rounded-md fancy-regular bg-sky-800 border-2 border-sky-500";
+export const warningBox: string =
+  "text-2xl p-3 rounded-md fancy-regular bg-yellow-800 border-2 border-yellow-500";
 export const imgTransition: string =
   "rounded-md drop-shadow-2xl transition duration-300 ease-in hover:ease-out hover:scale-105 hover:translate-x-3";
