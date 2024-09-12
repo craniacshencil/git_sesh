@@ -44,7 +44,7 @@ const CodeBlock: React.FC<codeBlockProps> = ({ codeText, imp, outText }) => {
         className={clsx(
           "rounded-t-md flex items-center justify-between pl-1 pr-3 pb-5",
           { "bg-gray-700 opacity-90": !imp },
-          { "bg-fuchsia-900 text-white": imp },
+          { "bg-cyan-900 text-white": imp },
         )}
       >
         <pre>
@@ -82,7 +82,7 @@ const CodeOut: React.FC<codeOutProps> = ({ className, outText, imp }) => {
   return (
     <div
       className={`${className} m-0 mt-0 border-t-2 border-gray-300 mb-7 px-3 pb-5 rounded-b-md 
-      ${clsx({ "bg-fuchsia-950": imp }, { "bg-gray-800": !imp })}`}
+      ${clsx({ "bg-cyan-950": imp }, { "bg-gray-800": !imp })}`}
     >
       <pre>
         <p className="block underline decoration-gray-400 pt-5 pl-5 pb-0 mb-0 text-xl font-bold">
